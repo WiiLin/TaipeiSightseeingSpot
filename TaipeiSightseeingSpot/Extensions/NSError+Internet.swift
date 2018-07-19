@@ -10,9 +10,9 @@ import Foundation
 
 
 public extension NSError {
-    public var isCancel : Bool{
+    public var isCancel : Bool {
         get{
-            if NSURLErrorCancelled == self.code{
+            if NSURLErrorCancelled == self.code {
                 return true
                 
             }
@@ -21,10 +21,10 @@ public extension NSError {
             }
         }
     }
-    public var isInternetError : Bool{
+    public var isInternetError : Bool {
         get{
             if NSURLErrorNotConnectedToInternet == self.code ||
-                NSURLErrorTimedOut == self.code{
+                NSURLErrorTimedOut == self.code {
                 return true
                 
             }

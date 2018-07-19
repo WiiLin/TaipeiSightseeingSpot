@@ -17,7 +17,7 @@ enum WLSightseeingSpotParameterKeys : String {
     case limit      = "limit"
     case offset     = "offset"
     
-    var defaultValue : String{
+    var defaultValue : String {
         switch self {
         case .scope:    return "resourceAquire"
         case .rid:      return "36847f3f-deff-4183-a5bb-800737591de5"
@@ -44,7 +44,7 @@ struct WLSightseeingSpot: Decodable {
     let file    : String
     private var _files : [String]?
     
-    mutating func files() -> [String]{
+    mutating func files() -> [String] {
         if let _files = self._files{
             return _files
         }

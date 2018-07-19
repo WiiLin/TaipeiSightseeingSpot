@@ -23,11 +23,10 @@ class WLMainViewController: UIViewController {
         self.loadData()
         // Do any additional setup after loading the view.
     }
-    func loadData(){
-        guard false == self.loadingData else{
+    func loadData() {
+        guard false == self.loadingData else {
             return
         }
-        print("loadData")
         self.footerIndicator.startAnimating()
         self.refreshButton.isHidden = true
         self.loadingData = true
@@ -52,7 +51,7 @@ class WLMainViewController: UIViewController {
     }
 }
 
-extension WLMainViewController : UITableViewDataSource{
+extension WLMainViewController : UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 1
     }
@@ -70,20 +69,20 @@ extension WLMainViewController : UITableViewDataSource{
     
     
 }
-extension WLMainViewController : UITableViewDelegate{
-//    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-//        let lastElement = self.dataSource.count - 1
-//        if indexPath.section == lastElement {
-//            self.loadData()
-//        }
-//    }
+extension WLMainViewController : UITableViewDelegate {
+    //    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+    //        let lastElement = self.dataSource.count - 1
+    //        if indexPath.section == lastElement {
+    //            self.loadData()
+    //        }
+    //    }
     
 }
-extension WLMainViewController : UIScrollViewDelegate{
+extension WLMainViewController : UIScrollViewDelegate {
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         if scrollView.contentOffset.y >= (scrollView.contentSize.height - scrollView.frame.size.height){
-             self.loadData()
+            self.loadData()
         }
     }
-    
 }
+

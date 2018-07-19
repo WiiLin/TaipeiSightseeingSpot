@@ -29,12 +29,12 @@ class WLMainTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    func setup(sightseeingSpot : WLSightseeingSpot,didSelectImageClosure : ((String,UIImage?)->())?){
+    func setup(sightseeingSpot : WLSightseeingSpot,didSelectImageClosure : ((String,UIImage?)->())?) {
         self.didSelectImageClosure = didSelectImageClosure
         self.sightseeingSpot    = sightseeingSpot
         self.titleLabel.text    = sightseeingSpot.stitle
         self.bodyLabel.text     = sightseeingSpot.xbody
-        if 0 == self.sightseeingSpot.files().count{
+        if 0 == self.sightseeingSpot.files().count {
             self.collectionViewHeightLayoutConstraint.constant = 0
             self.collectionViewBootomLayoutConstraint.constant = 0
         }
@@ -46,15 +46,15 @@ class WLMainTableViewCell: UITableViewCell {
     }
     
 }
-extension WLMainTableViewCell : UICollectionViewDelegateFlowLayout{
+extension WLMainTableViewCell : UICollectionViewDelegateFlowLayout {
     
 }
-extension WLMainTableViewCell : UICollectionViewDelegate{
+extension WLMainTableViewCell : UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         self.didSelectImageClosure?(self.sightseeingSpot.files()[indexPath.row],(collectionView.cellForItem(at: indexPath) as? WLMainCollectionViewCell)?.imageView.image)
     }
 }
-extension WLMainTableViewCell : UICollectionViewDataSource{
+extension WLMainTableViewCell : UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return self.sightseeingSpot.files().count
     }

@@ -22,7 +22,7 @@ class WLLoadingImageView: UIImageView {
                                      self.activityIndicatorView.widthAnchor.constraint(equalToConstant: 50)])
         
     }
-    func setup(url : String){
+    func setup(url : String) {
         self.activityIndicatorView.startAnimating()
         self.setImage(url: url, completion: {
             self.activityIndicatorView.stopAnimating()

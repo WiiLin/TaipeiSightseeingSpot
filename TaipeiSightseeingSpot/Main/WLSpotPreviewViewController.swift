@@ -14,7 +14,7 @@ class WLSpotPreviewViewController: UIViewController {
     var image : UIImage?
     @IBOutlet weak var imageView: WLLoadingImageView!
     
-    class func spotPreviewViewController(imageURL:String, image : UIImage?) -> WLSpotPreviewViewController{
+    class func spotPreviewViewController(imageURL:String, image : UIImage?) -> WLSpotPreviewViewController {
         let vc = (UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "WLSpotPreviewVC") as! WLSpotPreviewViewController)
         vc.modalPresentationStyle   = .overCurrentContext
         vc.modalTransitionStyle     = .crossDissolve

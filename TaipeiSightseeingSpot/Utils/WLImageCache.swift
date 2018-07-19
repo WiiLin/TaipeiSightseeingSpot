@@ -11,11 +11,11 @@ import UIKit
 class WLImageCache: NSCache<NSString, UIImage> {
     static let shared : WLImageCache = WLImageCache()
     
-    func cacheImage(image:UIImage, key:String){
+    func cacheImage(image:UIImage, key:String) {
         self.setObject(image, forKey: key as NSString)
     }
 
-    func image(key : String) -> UIImage?{
+    func image(key : String) -> UIImage? {
         return self.object(forKey: key as NSString)
     }
 }
