@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14306.4" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Rja-aZ-9hP">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14278.2"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="VUR-Hu-NcR">
+            <objects>
+                <navigationController id="Rja-aZ-9hP" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="GSo-S6-0C1">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="fN6-ha-biN"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Jst-Jy-6oF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1017" y="-18"/>
+        </scene>
+        <!--台北市熱門景點-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="WLMainViewController" customModule="TaipeiSightseeingSpot" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="1" translatesAutoresizingMaskIntoConstraints="NO" id="rbo-cp-5Kq">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <view key="tableFooterView" contentMode="scaleToFill" id="nu1-ie-bgL">
+                                    <rect key="frame" x="0.0" y="293.5" width="375" height="44"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <subviews>
+                                        <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="6fm-RK-M0k">
+                                            <rect key="frame" x="169" y="3.5" width="37" height="37"/>
+                                            <color key="color" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </activityIndicatorView>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qNq-Qz-dr0">
+                                            <rect key="frame" x="169.5" y="0.0" width="36" height="44"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="44" id="VoZ-f5-qZQ"/>
+                                                <constraint firstAttribute="width" constant="36" id="o3i-fi-YNW"/>
+                                            </constraints>
+                                            <state key="normal" image="Navigation_Refresh"/>
+                                            <connections>
+                                                <action selector="onClickRefresh:" destination="BYZ-38-t0r" eventType="touchUpInside" id="j3a-VO-hRm"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstItem="qNq-Qz-dr0" firstAttribute="centerY" secondItem="nu1-ie-bgL" secondAttribute="centerY" id="B7g-A9-dD9"/>
+                                        <constraint firstItem="qNq-Qz-dr0" firstAttribute="centerX" secondItem="nu1-ie-bgL" secondAttribute="centerX" id="BIZ-Y2-rUy"/>
+                                        <constraint firstItem="6fm-RK-M0k" firstAttribute="centerX" secondItem="nu1-ie-bgL" secondAttribute="centerX" id="Pl9-rA-osy"/>
+                                        <constraint firstItem="6fm-RK-M0k" firstAttribute="centerY" secondItem="nu1-ie-bgL" secondAttribute="centerY" id="c6h-5h-7Sl"/>
+                                    </constraints>
+                                </view>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="WLMainTableViewCell" rowHeight="237" id="uW8-ru-KWg" customClass="WLMainTableViewCell" customModule="TaipeiSightseeingSpot" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="55.5" width="375" height="237"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="uW8-ru-KWg" id="kbh-8l-dnL">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="236.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tbm-Hc-bqm">
+                                                    <rect key="frame" x="18" y="10" width="342" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fxv-tg-gYN">
+                                                    <rect key="frame" x="18" y="41" width="342" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" bouncesZoom="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="gAI-Zg-DxN">
+                                                    <rect key="frame" x="18" y="92" width="342" height="115"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="115" id="OTi-0A-ST8"/>
+                                                    </constraints>
+                                                    <collectionViewLayout key="collectionViewLayout" id="Rdg-Ba-Udn" customClass="WLMainCollectionViewFlowLayout" customModule="TaipeiSightseeingSpot" customModuleProvider="target"/>
+                                                    <cells>
+                                                        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="WLMainCollectionViewCell" id="wer-nb-guX" customClass="WLMainCollectionViewCell" customModule="TaipeiSightseeingSpot" customModuleProvider="target">
+                                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                                <autoresizingMask key="autoresizingMask"/>
+                                                                <subviews>
+                                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="tNb-jU-RXB" customClass="WLLoadingImageView" customModule="TaipeiSightseeingSpot" customModuleProvider="target">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                                    </imageView>
+                                                                </subviews>
+                                                            </view>
+                                                            <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                                            <constraints>
+                                                                <constraint firstItem="tNb-jU-RXB" firstAttribute="leading" secondItem="wer-nb-guX" secondAttribute="leading" id="AXY-Mj-lAJ"/>
+                                                                <constraint firstItem="tNb-jU-RXB" firstAttribute="top" secondItem="wer-nb-guX" secondAttribute="top" id="XoD-xj-IlH"/>
+                                                                <constraint firstAttribute="trailing" secondItem="tNb-jU-RXB" secondAttribute="trailing" id="eFI-6D-ZPN"/>
+                                                                <constraint firstAttribute="bottom" secondItem="tNb-jU-RXB" secondAttribute="bottom" id="qYF-zZ-FZb"/>
+                                                            </constraints>
+                                                            <connections>
+                                                                <outlet property="imageView" destination="tNb-jU-RXB" id="qnU-NQ-u7k"/>
+                                                            </connections>
+                                                        </collectionViewCell>
+                                                    </cells>
+                                                </collectionView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="tbm-Hc-bqm" firstAttribute="top" secondItem="kbh-8l-dnL" secondAttribute="top" constant="10" id="5eX-Up-9Hj"/>
+                                                <constraint firstItem="Fxv-tg-gYN" firstAttribute="top" secondItem="tbm-Hc-bqm" secondAttribute="bottom" constant="10" id="AT8-5v-ok9"/>
+                                                <constraint firstItem="gAI-Zg-DxN" firstAttribute="top" secondItem="Fxv-tg-gYN" secondAttribute="bottom" constant="30" id="IHc-31-iLA"/>
+                                                <constraint firstAttribute="trailing" secondItem="tbm-Hc-bqm" secondAttribute="trailing" constant="15" id="SgI-oA-kAX"/>
+                                                <constraint firstAttribute="bottom" secondItem="gAI-Zg-DxN" secondAttribute="bottom" constant="29.5" id="VVa-6k-yTk"/>
+                                                <constraint firstItem="tbm-Hc-bqm" firstAttribute="leading" secondItem="kbh-8l-dnL" secondAttribute="leading" constant="18" id="aUM-t1-vbp"/>
+                                                <constraint firstItem="gAI-Zg-DxN" firstAttribute="leading" secondItem="tbm-Hc-bqm" secondAttribute="leading" id="rZG-TB-qEf"/>
+                                                <constraint firstItem="gAI-Zg-DxN" firstAttribute="trailing" secondItem="tbm-Hc-bqm" secondAttribute="trailing" id="tuS-jf-TM9"/>
+                                                <constraint firstItem="Fxv-tg-gYN" firstAttribute="leading" secondItem="tbm-Hc-bqm" secondAttribute="leading" id="w0S-dD-AjX"/>
+                                                <constraint firstItem="Fxv-tg-gYN" firstAttribute="trailing" secondItem="tbm-Hc-bqm" secondAttribute="trailing" id="zrk-gs-SxQ"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="bodyLabel" destination="Fxv-tg-gYN" id="OUy-at-nLt"/>
+                                            <outlet property="collectionView" destination="gAI-Zg-DxN" id="gs1-8J-ZyU"/>
+                                            <outlet property="collectionViewBootomLayoutConstraint" destination="VVa-6k-yTk" id="Iyc-kA-ph1"/>
+                                            <outlet property="collectionViewHeightLayoutConstraint" destination="OTi-0A-ST8" id="0cX-1F-8Px"/>
+                                            <outlet property="titleLabel" destination="tbm-Hc-bqm" id="UTF-xK-aeA"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="rbo-cp-5Kq" secondAttribute="bottom" id="9ij-Jn-5uB"/>
+                            <constraint firstItem="rbo-cp-5Kq" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="JSk-D7-yY3"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="rbo-cp-5Kq" secondAttribute="trailing" id="cSR-Yw-beC"/>
+                            <constraint firstItem="rbo-cp-5Kq" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="lWa-OC-RQF"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="台北市熱門景點" id="hHF-Zh-1CB"/>
+                    <connections>
+                        <outlet property="footerIndicator" destination="6fm-RK-M0k" id="ey4-HP-UeI"/>
+                        <outlet property="refreshButton" destination="qNq-Qz-dr0" id="HDb-vv-jMj"/>
+                        <outlet property="tableView" destination="rbo-cp-5Kq" id="6vt-ai-hcJ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-202" y="-18"/>
+        </scene>
+        <!--Spot Preview View Controller-->
+        <scene sceneID="Gsd-gP-MLx">
+            <objects>
+                <viewController storyboardIdentifier="WLSpotPreviewVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="jJd-7d-r42" customClass="WLSpotPreviewViewController" customModule="TaipeiSightseeingSpot" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ip5-iC-v4l">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="N8b-Uj-V5f">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="WPb-uj-DfU">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="nOZ-RR-jck" customClass="WLLoadingImageView" customModule="TaipeiSightseeingSpot" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="190" width="375" height="287.5"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" secondItem="nOZ-RR-jck" secondAttribute="height" multiplier="150:115" id="WrP-eF-ir6"/>
+                                            </constraints>
+                                        </imageView>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iZZ-GW-wYb">
+                                            <rect key="frame" x="137.5" y="547.5" width="100" height="100"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="100" id="D1A-Ny-pjU"/>
+                                                <constraint firstAttribute="width" constant="100" id="eH1-Nh-BZv"/>
+                                            </constraints>
+                                            <state key="normal" image="Navigation_Stop"/>
+                                            <connections>
+                                                <action selector="onClickCancel:" destination="jJd-7d-r42" eventType="touchUpInside" id="Bir-Z8-elr"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="iZZ-GW-wYb" firstAttribute="centerX" secondItem="WPb-uj-DfU" secondAttribute="centerX" id="1YH-8b-yGS"/>
+                                        <constraint firstAttribute="trailing" secondItem="nOZ-RR-jck" secondAttribute="trailing" id="bi9-OV-kG6"/>
+                                        <constraint firstItem="nOZ-RR-jck" firstAttribute="centerY" secondItem="WPb-uj-DfU" secondAttribute="centerY" id="jmu-2i-rdc"/>
+                                        <constraint firstItem="iZZ-GW-wYb" firstAttribute="top" secondItem="nOZ-RR-jck" secondAttribute="bottom" constant="70" id="mer-uM-VPg"/>
+                                        <constraint firstItem="nOZ-RR-jck" firstAttribute="leading" secondItem="WPb-uj-DfU" secondAttribute="leading" id="oC9-ew-fpD"/>
+                                    </constraints>
+                                </view>
+                                <blurEffect style="dark"/>
+                            </visualEffectView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="N8b-Uj-V5f" firstAttribute="leading" secondItem="Ip5-iC-v4l" secondAttribute="leading" id="JYB-Xe-4Et"/>
+                            <constraint firstAttribute="trailing" secondItem="N8b-Uj-V5f" secondAttribute="trailing" id="Xhb-YX-EgW"/>
+                            <constraint firstAttribute="bottom" secondItem="N8b-Uj-V5f" secondAttribute="bottom" id="r4f-IX-20h"/>
+                            <constraint firstItem="N8b-Uj-V5f" firstAttribute="top" secondItem="Ip5-iC-v4l" secondAttribute="top" id="vm8-It-bhi"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="o3H-tW-SIQ"/>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="nOZ-RR-jck" id="TEb-Ad-AJW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2hF-Rx-9U8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-202" y="750"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Navigation_Refresh" width="18" height="22"/>
+        <image name="Navigation_Stop" width="17" height="17"/>
+    </resources>
+</document>

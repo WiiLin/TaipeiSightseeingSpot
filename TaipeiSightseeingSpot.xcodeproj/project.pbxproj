@@ -1,0 +1,552 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2857C25C21002A590018D930 /* NSError+Internet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2857C25B21002A590018D930 /* NSError+Internet.swift */; };
+		2857C25E21002D3B0018D930 /* UIViewController+Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2857C25D21002D3B0018D930 /* UIViewController+Alert.swift */; };
+		2857C26021008E930018D930 /* WLSpotPreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2857C25F21008E930018D930 /* WLSpotPreviewViewController.swift */; };
+		28C80A1820FF205C0031019B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28C80A1720FF205C0031019B /* AppDelegate.swift */; };
+		28C80A1F20FF205F0031019B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 28C80A1E20FF205F0031019B /* Assets.xcassets */; };
+		28C80A2220FF205F0031019B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 28C80A2020FF205F0031019B /* LaunchScreen.storyboard */; };
+		28C80A2D20FF205F0031019B /* TaipeiSightseeingSpotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28C80A2C20FF205F0031019B /* TaipeiSightseeingSpotTests.swift */; };
+		28C80A3A20FF22B90031019B /* WLMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28C80A3920FF22B90031019B /* WLMainViewController.swift */; };
+		28C80A3F20FF232D0031019B /* WLAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28C80A3E20FF232D0031019B /* WLAPIService.swift */; };
+		28C80A4120FF256B0031019B /* WLSightseeingSpot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28C80A4020FF256B0031019B /* WLSightseeingSpot.swift */; };
+		28C80A4520FF49860031019B /* WLMainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28C80A4420FF49860031019B /* WLMainTableViewCell.swift */; };
+		28C80A4720FF4D440031019B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 28C80A4620FF4D440031019B /* Main.storyboard */; };
+		28C80A4920FF50E70031019B /* WLMainCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28C80A4820FF50E70031019B /* WLMainCollectionViewCell.swift */; };
+		28C80A4B20FF56B60031019B /* WLMainCollectionViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28C80A4A20FF56B60031019B /* WLMainCollectionViewFlowLayout.swift */; };
+		28C80A4E20FF7C160031019B /* UIImageView+Download.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28C80A4D20FF7C160031019B /* UIImageView+Download.swift */; };
+		28C80A5120FF7D190031019B /* WLImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28C80A5020FF7D190031019B /* WLImageCache.swift */; };
+		28C80A5320FF87A90031019B /* WLLoadingImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28C80A5220FF87A90031019B /* WLLoadingImageView.swift */; };
+		28C80A5520FF8F110031019B /* WLColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28C80A5420FF8F110031019B /* WLColor.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		28C80A2920FF205F0031019B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 28C80A0C20FF205C0031019B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 28C80A1320FF205C0031019B;
+			remoteInfo = TaipeiSightseeingSpot;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		2857C25B21002A590018D930 /* NSError+Internet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSError+Internet.swift"; sourceTree = "<group>"; };
+		2857C25D21002D3B0018D930 /* UIViewController+Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Alert.swift"; sourceTree = "<group>"; };
+		2857C25F21008E930018D930 /* WLSpotPreviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WLSpotPreviewViewController.swift; sourceTree = "<group>"; };
+		28C80A1420FF205C0031019B /* TaipeiSightseeingSpot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TaipeiSightseeingSpot.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		28C80A1720FF205C0031019B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		28C80A1E20FF205F0031019B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		28C80A2120FF205F0031019B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		28C80A2320FF205F0031019B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		28C80A2820FF205F0031019B /* TaipeiSightseeingSpotTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TaipeiSightseeingSpotTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		28C80A2C20FF205F0031019B /* TaipeiSightseeingSpotTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaipeiSightseeingSpotTests.swift; sourceTree = "<group>"; };
+		28C80A2E20FF205F0031019B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		28C80A3920FF22B90031019B /* WLMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WLMainViewController.swift; sourceTree = "<group>"; };
+		28C80A3E20FF232D0031019B /* WLAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WLAPIService.swift; sourceTree = "<group>"; };
+		28C80A4020FF256B0031019B /* WLSightseeingSpot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WLSightseeingSpot.swift; sourceTree = "<group>"; };
+		28C80A4420FF49860031019B /* WLMainTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WLMainTableViewCell.swift; sourceTree = "<group>"; };
+		28C80A4620FF4D440031019B /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		28C80A4820FF50E70031019B /* WLMainCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WLMainCollectionViewCell.swift; sourceTree = "<group>"; };
+		28C80A4A20FF56B60031019B /* WLMainCollectionViewFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WLMainCollectionViewFlowLayout.swift; sourceTree = "<group>"; };
+		28C80A4D20FF7C160031019B /* UIImageView+Download.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Download.swift"; sourceTree = "<group>"; };
+		28C80A5020FF7D190031019B /* WLImageCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WLImageCache.swift; sourceTree = "<group>"; };
+		28C80A5220FF87A90031019B /* WLLoadingImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WLLoadingImageView.swift; sourceTree = "<group>"; };
+		28C80A5420FF8F110031019B /* WLColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WLColor.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		28C80A1120FF205C0031019B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		28C80A2520FF205F0031019B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		28C80A0B20FF205C0031019B = {
+			isa = PBXGroup;
+			children = (
+				28C80A1620FF205C0031019B /* TaipeiSightseeingSpot */,
+				28C80A2B20FF205F0031019B /* TaipeiSightseeingSpotTests */,
+				28C80A1520FF205C0031019B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		28C80A1520FF205C0031019B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				28C80A1420FF205C0031019B /* TaipeiSightseeingSpot.app */,
+				28C80A2820FF205F0031019B /* TaipeiSightseeingSpotTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		28C80A1620FF205C0031019B /* TaipeiSightseeingSpot */ = {
+			isa = PBXGroup;
+			children = (
+				28C80A1720FF205C0031019B /* AppDelegate.swift */,
+				28C80A3B20FF22D40031019B /* Main */,
+				28C80A3C20FF23060031019B /* APIService */,
+				28C80A4C20FF7BF50031019B /* Extensions */,
+				28C80A4F20FF7CFE0031019B /* Utils */,
+				28C80A1E20FF205F0031019B /* Assets.xcassets */,
+				28C80A2020FF205F0031019B /* LaunchScreen.storyboard */,
+				28C80A2320FF205F0031019B /* Info.plist */,
+			);
+			path = TaipeiSightseeingSpot;
+			sourceTree = "<group>";
+		};
+		28C80A2B20FF205F0031019B /* TaipeiSightseeingSpotTests */ = {
+			isa = PBXGroup;
+			children = (
+				28C80A2C20FF205F0031019B /* TaipeiSightseeingSpotTests.swift */,
+				28C80A2E20FF205F0031019B /* Info.plist */,
+			);
+			path = TaipeiSightseeingSpotTests;
+			sourceTree = "<group>";
+		};
+		28C80A3B20FF22D40031019B /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				28C80A4620FF4D440031019B /* Main.storyboard */,
+				28C80A3920FF22B90031019B /* WLMainViewController.swift */,
+				28C80A4420FF49860031019B /* WLMainTableViewCell.swift */,
+				28C80A4820FF50E70031019B /* WLMainCollectionViewCell.swift */,
+				28C80A4A20FF56B60031019B /* WLMainCollectionViewFlowLayout.swift */,
+				2857C25F21008E930018D930 /* WLSpotPreviewViewController.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		28C80A3C20FF23060031019B /* APIService */ = {
+			isa = PBXGroup;
+			children = (
+				28C80A3D20FF23130031019B /* APIClass */,
+				28C80A3E20FF232D0031019B /* WLAPIService.swift */,
+			);
+			path = APIService;
+			sourceTree = "<group>";
+		};
+		28C80A3D20FF23130031019B /* APIClass */ = {
+			isa = PBXGroup;
+			children = (
+				28C80A4020FF256B0031019B /* WLSightseeingSpot.swift */,
+			);
+			path = APIClass;
+			sourceTree = "<group>";
+		};
+		28C80A4C20FF7BF50031019B /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				28C80A4D20FF7C160031019B /* UIImageView+Download.swift */,
+				2857C25B21002A590018D930 /* NSError+Internet.swift */,
+				2857C25D21002D3B0018D930 /* UIViewController+Alert.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		28C80A4F20FF7CFE0031019B /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				28C80A5020FF7D190031019B /* WLImageCache.swift */,
+				28C80A5220FF87A90031019B /* WLLoadingImageView.swift */,
+				28C80A5420FF8F110031019B /* WLColor.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		28C80A1320FF205C0031019B /* TaipeiSightseeingSpot */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 28C80A3120FF205F0031019B /* Build configuration list for PBXNativeTarget "TaipeiSightseeingSpot" */;
+			buildPhases = (
+				28C80A1020FF205C0031019B /* Sources */,
+				28C80A1120FF205C0031019B /* Frameworks */,
+				28C80A1220FF205C0031019B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TaipeiSightseeingSpot;
+			productName = TaipeiSightseeingSpot;
+			productReference = 28C80A1420FF205C0031019B /* TaipeiSightseeingSpot.app */;
+			productType = "com.apple.product-type.application";
+		};
+		28C80A2720FF205F0031019B /* TaipeiSightseeingSpotTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 28C80A3420FF205F0031019B /* Build configuration list for PBXNativeTarget "TaipeiSightseeingSpotTests" */;
+			buildPhases = (
+				28C80A2420FF205F0031019B /* Sources */,
+				28C80A2520FF205F0031019B /* Frameworks */,
+				28C80A2620FF205F0031019B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				28C80A2A20FF205F0031019B /* PBXTargetDependency */,
+			);
+			name = TaipeiSightseeingSpotTests;
+			productName = TaipeiSightseeingSpotTests;
+			productReference = 28C80A2820FF205F0031019B /* TaipeiSightseeingSpotTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		28C80A0C20FF205C0031019B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = WL;
+				LastSwiftUpdateCheck = 1000;
+				LastUpgradeCheck = 1000;
+				ORGANIZATIONNAME = "Wii Lin";
+				TargetAttributes = {
+					28C80A1320FF205C0031019B = {
+						CreatedOnToolsVersion = 10.0;
+					};
+					28C80A2720FF205F0031019B = {
+						CreatedOnToolsVersion = 10.0;
+						TestTargetID = 28C80A1320FF205C0031019B;
+					};
+				};
+			};
+			buildConfigurationList = 28C80A0F20FF205C0031019B /* Build configuration list for PBXProject "TaipeiSightseeingSpot" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+			);
+			mainGroup = 28C80A0B20FF205C0031019B;
+			productRefGroup = 28C80A1520FF205C0031019B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				28C80A1320FF205C0031019B /* TaipeiSightseeingSpot */,
+				28C80A2720FF205F0031019B /* TaipeiSightseeingSpotTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		28C80A1220FF205C0031019B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				28C80A4720FF4D440031019B /* Main.storyboard in Resources */,
+				28C80A2220FF205F0031019B /* LaunchScreen.storyboard in Resources */,
+				28C80A1F20FF205F0031019B /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		28C80A2620FF205F0031019B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		28C80A1020FF205C0031019B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				28C80A5320FF87A90031019B /* WLLoadingImageView.swift in Sources */,
+				2857C25C21002A590018D930 /* NSError+Internet.swift in Sources */,
+				28C80A3F20FF232D0031019B /* WLAPIService.swift in Sources */,
+				28C80A4120FF256B0031019B /* WLSightseeingSpot.swift in Sources */,
+				28C80A5120FF7D190031019B /* WLImageCache.swift in Sources */,
+				28C80A4920FF50E70031019B /* WLMainCollectionViewCell.swift in Sources */,
+				28C80A4B20FF56B60031019B /* WLMainCollectionViewFlowLayout.swift in Sources */,
+				2857C25E21002D3B0018D930 /* UIViewController+Alert.swift in Sources */,
+				28C80A5520FF8F110031019B /* WLColor.swift in Sources */,
+				28C80A4E20FF7C160031019B /* UIImageView+Download.swift in Sources */,
+				2857C26021008E930018D930 /* WLSpotPreviewViewController.swift in Sources */,
+				28C80A3A20FF22B90031019B /* WLMainViewController.swift in Sources */,
+				28C80A1820FF205C0031019B /* AppDelegate.swift in Sources */,
+				28C80A4520FF49860031019B /* WLMainTableViewCell.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		28C80A2420FF205F0031019B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				28C80A2D20FF205F0031019B /* TaipeiSightseeingSpotTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		28C80A2A20FF205F0031019B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 28C80A1320FF205C0031019B /* TaipeiSightseeingSpot */;
+			targetProxy = 28C80A2920FF205F0031019B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		28C80A2020FF205F0031019B /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				28C80A2120FF205F0031019B /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		28C80A2F20FF205F0031019B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		28C80A3020FF205F0031019B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		28C80A3220FF205F0031019B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = QKGBKWE8NL;
+				INFOPLIST_FILE = TaipeiSightseeingSpot/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.wii.test;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "match Development com.wii.test";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		28C80A3320FF205F0031019B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = TaipeiSightseeingSpot/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.wii.test;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		28C80A3520FF205F0031019B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = TMAN347XG5;
+				INFOPLIST_FILE = TaipeiSightseeingSpotTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.wiilin.TaipeiSightseeingSpotTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TaipeiSightseeingSpot.app/TaipeiSightseeingSpot";
+			};
+			name = Debug;
+		};
+		28C80A3620FF205F0031019B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = TMAN347XG5;
+				INFOPLIST_FILE = TaipeiSightseeingSpotTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.wiilin.TaipeiSightseeingSpotTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TaipeiSightseeingSpot.app/TaipeiSightseeingSpot";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		28C80A0F20FF205C0031019B /* Build configuration list for PBXProject "TaipeiSightseeingSpot" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				28C80A2F20FF205F0031019B /* Debug */,
+				28C80A3020FF205F0031019B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		28C80A3120FF205F0031019B /* Build configuration list for PBXNativeTarget "TaipeiSightseeingSpot" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				28C80A3220FF205F0031019B /* Debug */,
+				28C80A3320FF205F0031019B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		28C80A3420FF205F0031019B /* Build configuration list for PBXNativeTarget "TaipeiSightseeingSpotTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				28C80A3520FF205F0031019B /* Debug */,
+				28C80A3620FF205F0031019B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 28C80A0C20FF205C0031019B /* Project object */;
+}
