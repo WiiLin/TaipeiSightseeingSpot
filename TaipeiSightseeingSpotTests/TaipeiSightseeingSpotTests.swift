@@ -19,9 +19,26 @@ class TaipeiSightseeingSpotTests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    func testInterError() {
+        let someError  = NSError.init(domain: "", code: 0, userInfo: [:])
+        XCTAssert(!someError.isInternetError)
+        let notConnectedError  = NSError.init(domain: "", code: NSURLErrorNotConnectedToInternet, userInfo: [:])
+        XCTAssert(notConnectedError.isInternetError)
+        let timedOutError  = NSError.init(domain: "", code: NSURLErrorTimedOut, userInfo: [:])
+        XCTAssert(timedOutError.isInternetError)
+    }
+    
+    func testSightseeingSpotListAPI(){
+        let expectation : XCTestExpectation = self.expectation(description: "testSightseeingSpotListAPI")
+    
+        WLAPIService.shared.getSightseeingSpotList(offset: 0, success: { (sightseeingSpotList) in
+            XCTAssert(0 != sightseeingSpotList.count)
+             expectation.fulfill()
+        }) { (error) in
+            XCTAssertNil(error)
+            expectation.fulfill()
+        }
+        self.wait(for: [expectation], timeout: 5)
     }
 
     func testPerformanceExample() {

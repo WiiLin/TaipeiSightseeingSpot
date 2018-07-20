@@ -34,9 +34,13 @@ class WLMainViewController: UIViewController {
                                                    success: { (sightseeingSpotList) in
                                                     self.footerIndicator.stopAnimating()
                                                     self.loadingData = false
+                                                    guard 0 != sightseeingSpotList.count else{
+                                                        return
+                                                    }
                                                     self.offset += 1
                                                     self.dataSource += sightseeingSpotList
                                                     self.tableView.reloadData()
+
                                                     
         }) { (error) in
             self.refreshButton.isHidden = false
@@ -70,19 +74,12 @@ extension WLMainViewController : UITableViewDataSource {
     
 }
 extension WLMainViewController : UITableViewDelegate {
-    //    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-    //        let lastElement = self.dataSource.count - 1
-    //        if indexPath.section == lastElement {
-    //            self.loadData()
-    //        }
-    //    }
-    
-}
-extension WLMainViewController : UIScrollViewDelegate {
-    func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        if scrollView.contentOffset.y >= (scrollView.contentSize.height - scrollView.frame.size.height){
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        let lastElement = self.dataSource.count - 1
+        if indexPath.section == lastElement {
             self.loadData()
         }
     }
 }
+
 

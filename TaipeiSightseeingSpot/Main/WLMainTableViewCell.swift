@@ -33,6 +33,7 @@ class WLMainTableViewCell: UITableViewCell {
         self.didSelectImageClosure = didSelectImageClosure
         self.sightseeingSpot    = sightseeingSpot
         self.titleLabel.text    = sightseeingSpot.stitle
+        
         self.bodyLabel.text     = sightseeingSpot.xbody
         if 0 == self.sightseeingSpot.files().count {
             self.collectionViewHeightLayoutConstraint.constant = 0
